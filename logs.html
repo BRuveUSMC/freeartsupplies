@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Submission Details</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    div {
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+    <h2>Submission Details</h2>
+    <div id="details"></div>
+<script>
+// Retrieve the form data from local storage
+const formData = JSON.parse(localStorage.getItem('formData'));
+
+if (formData) {
+    document.getElementById('details').innerHTML = `
+        <p>Username: ${formData.username}</p>
+        <p>Password: ${formData.password}</p>
+        <p>Address Line 1: ${formData.address1}</p>
+        <p>Address Line 2: ${formData.address2}</p>
+        <p>Zip Code: ${formData.zipCode}</p>
+        <p>Device IP: ${formData.deviceIP}</p>
+        <p>Device Name: ${formData.deviceName}</p>
+    `;
+} else {
+    document.getElementById('details').innerText = 'No data found.';
+}
+</script>
+</body>
+</html>
