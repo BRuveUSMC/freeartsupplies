@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    div {
+        margin-bottom: 10px;
+    }
+    label {
+        margin-right: 10px;
+    }
+</style>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form id="registrationForm">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div>
+            <label for="address1">Address Line 1:</label>
+            <input type="text" id="address1" name="address1" required>
+        </div>
+        <div>
+            <label for="address2">Address Line 2:</label>
+            <input type="text" id="address2" name="address2">
+        </div>
+        <div>
+            <label for="zipCode">Zip Code:</label>
+            <input type="text" id="zipCode" name="zipCode" required>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+<script>
+document.getElementById('registrationForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    const formData = {
+        username: document.getElementById('username').value,
+        password: document.getElementById('password').value,
+        address1: document.getElementById('address1').value,
+        address2: document.getElementById('address2').value,
+        zipCode: document.getElementById('zipCode').value,
+        // Placeholder values for device IP and name
+        deviceIP: 'Placeholder-IP',
+        deviceName: 'Placeholder-Device-Name'
+    };
+
+    // Store form data in local storage
+    localStorage.setItem('formData', JSON.stringify(formData));
+
+    // Navigate to the details page
+    window.location.href = 'details.html';
+});
+</script>
+</body>
+</html>
