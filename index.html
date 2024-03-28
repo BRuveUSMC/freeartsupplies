@@ -1,99 +1,174 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Will You Marry Me (In a Game)?</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <title>Lebon-Bon Inc: Hot Pack Project</title>
     <style>
-        body, html {
+        /* Your existing CSS styles */
+        /* Add your CSS styles here */
+        /* This is just a basic styling, feel free to customize */
+
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #222; /* Set background color to dark */
+            color: #eee; /* Set text color to light */
+        }
+
+        header {
+            background: linear-gradient(to bottom, #111, #222); /* Apply gradient */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: linear-gradient(to bottom, #111, #222); /* Apply gradient */
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background: linear-gradient(to bottom, #111, #222); /* Apply gradient */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .popup-overlay {
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            background-color: #f4e9d8;
-            font-family: 'Arial', sans-serif;
+            z-index: 999;
         }
 
-        .header {
-            background-color: pink;
-            font-family: 'Dancing Script', cursive;
-            color: white;
-            text-align: center;
+        .popup-content {
+            background: linear-gradient(to bottom, #111, #222); /* Apply gradient */
             padding: 20px;
-            font-size: 32px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
 
-        .container {
-            max-width: 600px;
-            margin: 40px auto;
-            background: white;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
-            border-radius: 8px;
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color: #eee; /* Set text color to light */
         }
 
-        h1 {
-            font-size: 24px;
-            color: #333;
-            text-align: center;
-        }
-
-        p {
-            font-size: 18px;
-            color: #333;
-        }
-
-        button {
-            display: block;
-            margin: 20px auto;
+        .popup-ok-button {
             padding: 10px 20px;
-            font-size: 18px;
-            background-color: #007bff;
+            background: linear-gradient(to bottom, #4CAF50, #2E8B57); /* Apply gradient */
             color: white;
             border: none;
-            cursor: pointer;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            cursor: pointer;
         }
 
-        button:hover {
-            background-color: #0056b3;
+        .popup-ok-button:hover {
+            background: linear-gradient(to bottom, #45a049, #2E8B57); /* Apply gradient */
         }
 
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 16px;
-            color: #666;
-        }
     </style>
+    <script>
+        window.onload = function() {
+            var disclaimerPopup = document.getElementById('disclaimer-popup');
+            var disclaimerClose = document.getElementById('disclaimer-close');
+            var okButton = document.getElementById('ok-button');
+
+            disclaimerClose.onclick = function() {
+                disclaimerPopup.style.display = 'none';
+            }
+
+            okButton.onclick = function() {
+                disclaimerPopup.style.display = 'none';
+            }
+        }
+    </script>
 </head>
 <body>
-    <div class="header">ALL POOKIE(S) HEAR YE' HEAR YE'</div>
-    <div class="container">
-        <h1>Uh em Pookie Wookie</h1>
-        <p>Hey there, Pookie Bear,</p>
-        <p>You should def Mary me lols.</p>
-        <p>Pwease :Beg</p>
-        <p>Im just a widle Bitty Boy</p>
-        <button id="proposalButton">Yes Pookie!</button>
+    <header>
+        <h1>Welcome to Lebon-Bon Inc</h1>
+    </header>
+    <nav>
+
+    </nav>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Hi there! We are Lebon-Bon Inc, a company dedicated to creating cool stuff. Our current project is all about making cold packs!</p>
+    </section>
+    <section id="overview">
+        <h2>Project Overview</h2>
+        <p>Imagine you have a magical substance that can make things super cold just by adding water. That's what we're exploring with potassium chloride! We want to turn it into a fantastic cold pack that helps when you get hurt.</p>
+    </section>
+    <section id="peak">
+        <h2>Message for Mrs. Peake</h2>
+        <p>Hey Mrs. Peake! This project took a lot of work, and we're hoping it's good enough for a great grade. We're giving it our best shot!</p>
+    </section>
+    <section id="steps">
+        <h2>Project Steps</h2>
+        <p>Here's what we're doing:</p>
+        <ol>
+            <li>Research: We're learning everything we can about potassium chloride and how it gets cold.</li>
+            <li>Testing: We're trying out different mixes to see which one makes the best cold pack.</li>
+            <li>Design: We're creating prototypes of our cold packs using safe and strong materials.</li>
+            <li>Testing Again: We're putting our cold packs through lots of tests to make sure they work well and are safe.</li>
+            <li>Improvement: If something isn't right, we'll fix it until we have the perfect cold pack!</li>
+        </ol>
+    </section>
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <p>Check out some cool pictures of our project!</p>
+        <!-- Add your gallery images here -->
+        <!-- Example: <img src="image.jpg" alt="Image description"> -->
+    </section>
+
+    <!-- Disclaimer Popup -->
+    <div id="disclaimer-popup" class="popup-overlay">
+        <div class="popup-content">
+            <span id="disclaimer-close" class="popup-close">&times;</span>
+            <h2>Disclaimer</h2>
+            <p>This website is for educational purposes only. Lebon-Bon Inc is a fictional company. Any resemblance to real companies is purely coincidental.</p>
+            <h3>Credits:</h3>
+            <ul>
+                <li>Jaxon Whitehouse (Site Development)</li>
+                <li>Harley Claunch Clark (Digital Art)</li>
+                <li>The Node.js Foundation (JavaScript Bootstrapping)</li>
+<li>Copyrght 2024 Jaxonwhitehouse.tech Under the M-I-T licence(s)</li>
+                <!-- Add more project members as needed -->
+            </ul>
+            <button id="ok-button" class="popup-ok-button">OK</button>
+        </div>
     </div>
-    <footer class="footer">
-        THIS IS A JOKE
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/canvas-confetti.min.js"></script>
-    <script>
-        document.getElementById('proposalButton').addEventListener('click', function() {
-            canvasConfetti.create(document.body, {
-                resize: true,
-                useWorker: true
-            })({
-                particleCount: 150,
-                spread: 160,
-                origin: { y: 0.1 } // Adjust the origin to the top
-            });
-        });
-    </script>
+
 </body>
 </html>
