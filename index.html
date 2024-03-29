@@ -98,6 +98,16 @@
             background: linear-gradient(to bottom, #45a049, #2E8B57); /* Apply gradient */
         }
 
+        /* New styles for fade-in scrolling effect */
+        img {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .fadeIn {
+            opacity: 1;
+        }
+
     </style>
     <script>
         window.onload = function() {
@@ -112,6 +122,27 @@
             okButton.onclick = function() {
                 disclaimerPopup.style.display = 'none';
             }
+
+            // Fade-in scrolling effect
+            window.addEventListener('scroll', function() {
+                var images = document.querySelectorAll('img');
+                for (var i = 0; i < images.length; i++) {
+                    var image = images[i];
+                    if (isElementInViewport(image)) {
+                        image.classList.add('fadeIn');
+                    }
+                }
+            });
+
+            function isElementInViewport(el) {
+                var rect = el.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
         }
     </script>
 </head>
@@ -123,52 +154,58 @@
 
     </nav>
     <section id="about">
-        <h2>About Us</h2>
-        <p>Hi there! We are Lebon-Bon Inc, a company dedicated to creating cool stuff. Our current project is all about making cold packs!</p>
-    </section>
-    <section id="overview">
-        <h2>Project Overview</h2>
-        <p>Imagine you have a magical substance that can make things super cold just by adding water. That's what we're exploring with potassium chloride! We want to turn it into a fantastic cold pack that helps when you get hurt.</p>
-    </section>
-    <section id="peak">
-        <h2>Message for Mrs. Peake</h2>
-        <p>Hey Mrs. Peake! This project took a lot of work, and we're hoping it's good enough for a great grade. We're giving it our best shot!</p>
-    </section>
-    <section id="steps">
-        <h2>Project Steps</h2>
-        <p>Here's what we're doing:</p>
-        <ol>
-            <li>Research: We're learning everything we can about potassium chloride and how it gets cold.</li>
-            <li>Testing: We're trying out different mixes to see which one makes the best cold pack.</li>
-            <li>Design: We're creating prototypes of our cold packs using safe and strong materials.</li>
-            <li>Testing Again: We're putting our cold packs through lots of tests to make sure they work well and are safe.</li>
-            <li>Improvement: If something isn't right, we'll fix it until we have the perfect cold pack!</li>
-        </ol>
-    </section>
-    <section id="gallery">
-        <h2>Gallery</h2>
-        <p>Check out some cool pictures of our project!</p>
-        <!-- Add your gallery images here -->
-        <!-- Example: <img src="image.jpg" alt="Image description"> -->
-    </section>
+  <h2>About Lebon-Bon Inc.</h2>
+  <p>Lebon-Bon Inc. specializes in manufacturing high-quality potassium chloride cold packs, designed to provide effective cold therapy for various medical applications.</p>
+  <img src="https://via.placeholder.com/400" alt="Placeholder Image">
+</section>
 
+<section id="products">
+  <h2>Lebon-Bon Cold Pack</h2>
+  <p>Our potassium chloride cold packs are meticulously crafted to deliver consistent and long-lasting cold therapy. They are suitable for medical professionals, sports injuries, and everyday use.</p>
+  <p>Key Features:</p>
+  <p>Contains high-grade potassium chloride</p>
+  <p>Durable and leak-proof packaging</p>
+  <p>Quick activation for immediate relief</p>
+  <p>Uniform cold distribution</p>
+  <img src="https://via.placeholder.com/400" alt="Placeholder Image">
+</section>
+
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>For inquiries or orders, please contact:</p>
+  <address>
+    Lebon-Bon Inc.<br>
+    123 Cold Pack Way<br>
+    Freezer City, ICY 00000<br>
+    Phone: 555-123-4567<br>
+    Email: info@lebonbon.com
+  </address>
+  <img src="https://via.placeholder.com/400" alt="Placeholder Image">
+</section>
+
+<footer>
+  <p>&copy; 2024 Jaxon Whitehouse. All rights reserved. | <a href="https://opensource.org/licenses/MIT">MIT License</a></p>
+</footer>
+</body>
+</html>
     <!-- Disclaimer Popup -->
     <div id="disclaimer-popup" class="popup-overlay">
         <div class="popup-content">
             <span id="disclaimer-close" class="popup-close">&times;</span>
             <h2>Disclaimer</h2>
             <p>This website is for educational purposes only. Lebon-Bon Inc is a fictional company. Any resemblance to real companies is purely coincidental.</p>
-            <h3>Credits:</h3>
-            <ul>
-                <li>Jaxon Whitehouse (Site Development)</li>
-                <li>Harley Claunch Clark (Digital Art)</li>
-                <li>The Node.js Foundation (JavaScript Bootstrapping)</li>
+<h3>Credits:</h3>
+<ul>
+<li>Jaxon Whitehouse (Site Development)</li>
+<li>Harley Claunch Clark (Digital Art)</li>
+<li>The Node.js Foundation (JavaScript Bootstrapping)</li>
 <li>Copyrght 2024 Jaxonwhitehouse.tech Under the M-I-T licence(s)</li>
-                <!-- Add more project members as needed -->
-            </ul>
-            <button id="ok-button" class="popup-ok-button">OK</button>
-        </div>
-    </div>
+<!-- Add more project members as needed -->
+</ul>
+<button id="ok-button" class="popup-ok-button">OK</button>
+</div>
+</div>
 
 </body>
 </html>
