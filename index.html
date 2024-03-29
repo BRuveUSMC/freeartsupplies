@@ -5,58 +5,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lebon-Bon Inc: Hot Pack Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Your existing CSS styles */
-        /* Add your CSS styles here */
-        /* This is just a basic styling, feel free to customize */
-
-        body {
-            font-family: Arial, sans-serif;
+          /* Reset Styles */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #222; /* Set background color to dark */
-            color: #eee; /* Set text color to light */
+            box-sizing: border-box;
         }
 
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom, #333, #111);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
         header {
-            background: linear-gradient(to bottom, #111, #222); /* Apply gradient */
-            color: white;
-            padding: 20px;
+            background: linear-gradient(to bottom, #222, #111);
+            color: #ffc107;
+            padding: 20px 0;
             text-align: center;
         }
 
+        /* Navigation Styles */
         nav {
-            background: linear-gradient(to bottom, #111, #222); /* Apply gradient */
-            color: white;
+            background: linear-gradient(to bottom, #222, #111);
+            padding: 10px 0;
             text-align: center;
-            padding: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         nav a {
-            color: white;
+            color: #fff;
             text-decoration: none;
-            margin: 0 10px;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            color: #ffc107;
         }
 
+        /* Section Styles */
         section {
-            padding: 20px;
+            padding: 50px 0;
             text-align: center;
         }
 
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        section img {
+            margin-top: 30px;
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer Styles */
         footer {
-            background: linear-gradient(to bottom, #111, #222); /* Apply gradient */
-            color: white;
+            background: linear-gradient(to bottom, #222, #111);
+            color: #fff;
+            padding: 20px 0;
             text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            font-size: 1rem;
         }
 
+        /* Popup Styles */
         .popup-overlay {
             background: rgba(0, 0, 0, 0.6);
             display: flex;
@@ -71,10 +99,13 @@
         }
 
         .popup-content {
-            background: linear-gradient(to bottom, #111, #222); /* Apply gradient */
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(to bottom, #222, #111);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+            max-width: 400px;
+            color: #fff;
         }
 
         .popup-close {
@@ -82,34 +113,109 @@
             top: 10px;
             right: 10px;
             cursor: pointer;
-            color: #eee; /* Set text color to light */
+            color: #999;
+            font-size: 1.2rem;
         }
 
         .popup-ok-button {
             padding: 10px 20px;
-            background: linear-gradient(to bottom, #4CAF50, #2E8B57); /* Apply gradient */
-            color: white;
+            background-color: #007bff;
+            color: #fff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
         }
 
         .popup-ok-button:hover {
-            background: linear-gradient(to bottom, #45a049, #2E8B57); /* Apply gradient */
+            background-color: #0056b3;
         }
 
-        /* New styles for fade-in scrolling effect */
-        img {
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
         }
-
-        .fadeIn {
-            opacity: 1;
-        }
-
     </style>
+</head>
+<body>
+   <header style="background: linear-gradient(to bottom, #222, #111); color: #ffc107; padding: 20px 0; text-align: center;">
+    <h1 style="font-size: 3.5rem; font-weight: 900; text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.5);">Welcome to Lebon-Bon Inc</h1>
+</header>
+
+
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="about">
+        <h2>About Lebon-Bon Inc.</h2>
+        <p>Lebon-Bon Inc. specializes in manufacturing high-quality potassium chloride cold packs, designed to provide effective cold therapy for various medical applications.</p>
+        <img src="https://via.placeholder.com/400" alt="Placeholder Image">
+    </section>
+
+    <section id="products">
+        <h2>Lebon-Bon Cold Pack</h2>
+        <p>Our potassium chloride cold packs are meticulously crafted to deliver consistent and long-lasting cold therapy. They are suitable for medical professionals, sports injuries, and everyday use.</p>
+        <p>Key Features:</p>
+        <ul>
+            <li>Contains high-grade potassium chloride</li>
+            <li>Durable and leak-proof packaging</li>
+            <li>Quick activation for immediate relief</li>
+            <li>Uniform cold distribution</li>
+        </ul>
+        <img src="https://via.placeholder.com/400" alt="Placeholder Image">
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>For inquiries or orders, please contact:</p>
+        <address>
+            Lebon-Bon Inc.<br>
+            123 Cold Pack Way<br>
+            Freezer City, ICY 00000<br>
+            Phone: 555-123-4567<br>
+            Email: info@lebonbon.com
+        </address>
+        <img src="https://via.placeholder.com/400" alt="Placeholder Image">
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Jaxon Whitehouse. All rights reserved. | <a href="https://opensource.org/licenses/MIT">MIT License</a></p>
+    </footer>
+
+    <!-- Disclaimer Popup -->
+    <div id="disclaimer-popup" class="popup-overlay">
+        <div class="popup-content">
+            <span id="disclaimer-close" class="popup-close">&times;</span>
+            <h2>Disclaimer</h2>
+            <p>This website is for educational purposes only. Lebon-Bon Inc is a fictional company. Any resemblance to real companies is purely coincidental.</p>
+            <h3>Credits:</h3>
+            <ul>
+                <li>Jaxon Whitehouse (Site Development)</li>
+                <li>Harley Claunch Clark (Digital Art)</li>
+                <li>The Node.js Foundation (JavaScript Bootstrapping)</li>
+                <li>Copyright 2024 Jaxonwhitehouse.tech Under the M-I-T licence(s)</li>
+            </ul>
+            <button id="ok-button" class="popup-ok-button">OK</button>
+        </div>
+    </div>
+
     <script>
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Popup functionality
         window.onload = function() {
             var disclaimerPopup = document.getElementById('disclaimer-popup');
             var disclaimerClose = document.getElementById('disclaimer-close');
@@ -117,11 +223,11 @@
 
             disclaimerClose.onclick = function() {
                 disclaimerPopup.style.display = 'none';
-            }
+            };
 
             okButton.onclick = function() {
                 disclaimerPopup.style.display = 'none';
-            }
+            };
 
             // Fade-in scrolling effect
             window.addEventListener('scroll', function() {
@@ -145,67 +251,6 @@
             }
         }
     </script>
-</head>
-<body>
-    <header>
-        <h1>Welcome to Lebon-Bon Inc</h1>
-    </header>
-    <nav>
-
-    </nav>
-    <section id="about">
-  <h2>About Lebon-Bon Inc.</h2>
-  <p>Lebon-Bon Inc. specializes in manufacturing high-quality potassium chloride cold packs, designed to provide effective cold therapy for various medical applications.</p>
-  <img src="https://via.placeholder.com/400" alt="Placeholder Image">
-</section>
-
-<section id="products">
-  <h2>Lebon-Bon Cold Pack</h2>
-  <p>Our potassium chloride cold packs are meticulously crafted to deliver consistent and long-lasting cold therapy. They are suitable for medical professionals, sports injuries, and everyday use.</p>
-  <p>Key Features:</p>
-  <p>Contains high-grade potassium chloride</p>
-  <p>Durable and leak-proof packaging</p>
-  <p>Quick activation for immediate relief</p>
-  <p>Uniform cold distribution</p>
-  <img src="https://via.placeholder.com/400" alt="Placeholder Image">
-</section>
-
-
-<section id="contact">
-  <h2>Contact Us</h2>
-  <p>For inquiries or orders, please contact:</p>
-  <address>
-    Lebon-Bon Inc.<br>
-    123 Cold Pack Way<br>
-    Freezer City, ICY 00000<br>
-    Phone: 555-123-4567<br>
-    Email: info@lebonbon.com
-  </address>
-  <img src="https://via.placeholder.com/400" alt="Placeholder Image">
-</section>
-
-<footer>
-  <p>&copy; 2024 Jaxon Whitehouse. All rights reserved. | <a href="https://opensource.org/licenses/MIT">MIT License</a></p>
-</footer>
 </body>
 </html>
-    <!-- Disclaimer Popup -->
-    <div id="disclaimer-popup" class="popup-overlay">
-        <div class="popup-content">
-            <span id="disclaimer-close" class="popup-close">&times;</span>
-            <h2>Disclaimer</h2>
-            <p>This website is for educational purposes only. Lebon-Bon Inc is a fictional company. Any resemblance to real companies is purely coincidental.</p>
-<h3>Credits:</h3>
-<ul>
-<li>Jaxon Whitehouse (Site Development)</li>
-<li>Harley Claunch Clark (Digital Art)</li>
-<li>The Node.js Foundation (JavaScript Bootstrapping)</li>
-<li>Copyrght 2024 Jaxonwhitehouse.tech Under the M-I-T licence(s)</li>
-<!-- Add more project members as needed -->
-</ul>
-<button id="ok-button" class="popup-ok-button">OK</button>
-</div>
-</div>
 
-</body>
-</html>
