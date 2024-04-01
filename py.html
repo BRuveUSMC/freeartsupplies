@@ -1,0 +1,151 @@
+<!-- Python Guide -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Guide</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      padding-top: 50px;
+    }
+    .jumbotron {
+      background-color: #343a40;
+      color: #fff;
+      padding: 80px 30px;
+      margin-bottom: 0;
+    }
+    .section {
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .credits-popup {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Python Guide</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">HTML Guide</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="python.html">Python Guide</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Jumbotron -->
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1 class="display-4">Welcome to the Python Guide</h1>
+    <p class="lead">Learn the basics of Python, a versatile programming language used for web development, data analysis, artificial intelligence, and more.</p>
+  </div>
+</div>
+
+<!-- Main Content -->
+<div class="container">
+  <!-- Python Introduction section -->
+  <div id="introduction" class="section">
+    <h2>Introduction</h2>
+    <p>Python is a high-level, interpreted programming language known for its simplicity and readability. It's widely used in various domains, including web development, data analysis, artificial intelligence, and scientific computing.</p>
+    <p>This guide will introduce you to the fundamentals of Python programming, covering topics such as variables, data types, control structures, functions, and more.</p>
+  </div>
+
+  <!-- Variables and Data Types section -->
+  <div id="variables-and-data-types" class="section">
+    <h2>Variables and Data Types</h2>
+    <p>In Python, variables are used to store data values. The data type of a variable determines the type of data it can hold.</p>
+    <p>Some common data types in Python include:</p>
+    <ul>
+      <li><code>int</code>: Integer numbers</li>
+      <li><code>float</code>: Floating-point numbers</li>
+      <li><code>str</code>: Strings of characters</li>
+      <li><code>bool</code>: Boolean values (True or False)</li>
+      <li><code>list</code>: Ordered collection of items</li>
+      <li><code>tuple</code>: Immutable ordered collection of items</li>
+      <li><code>dict</code>: Collection of key-value pairs</li>
+    </ul>
+    <p>Variables in Python can dynamically change their data type.</p>
+  </div>
+
+  <!-- Control Structures section -->
+  <div id="control-structures" class="section">
+    <h2>Control Structures</h2>
+    <p>Python provides various control structures to manage the flow of execution in a program:</p>
+    <ul>
+      <li><strong>Conditional Statements:</strong> <code>if</code>, <code>elif</code>, <code>else</code></li>
+      <li><strong>Looping Statements:</strong> <code>for</code>, <code>while</code></li>
+      <li><strong>Control Flow:</strong> <code>break</code>, <code>continue</code>, <code>pass</code></li>
+    </ul>
+    <p>These control structures allow you to make decisions, iterate over data, and control the flow of execution based on conditions.</p>
+  </div>
+
+  <!-- Functions section -->
+  <div id="functions" class="section">
+    <h2>Functions</h2>
+    <p>Functions are reusable blocks of code that perform a specific task. They allow you to organize your code into manageable units and avoid repetition.</p>
+    <p>In Python, you can define functions using the <code>def</code> keyword. Functions can have parameters and return values.</p>
+    <pre><code>
+      def greet(name):
+          return f"Hello, {name}!"
+
+      print(greet("Alice"))
+    </code></pre>
+    <p>In the above example, the <code>greet</code> function takes a <code>name</code> parameter and returns a greeting message.</p>
+  </div>
+</div>
+
+<!-- Credits Popup -->
+<div class="credits-popup">
+  <button type="button" class="btn btn-info" data-toggle="modal" data-target="#creditsModal">Credits</button>
+</div>
+
+<!-- Credits Modal -->
+<div class="modal fade" id="creditsModal" tabindex="-1" role="dialog" aria-labelledby="creditsModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="creditsModalLabel">Credits</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>This Python Guide is created by Jaxon Whitehouse (AKA BRuve).</p>
+        <p>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JavaScript and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
